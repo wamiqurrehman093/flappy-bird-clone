@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bl673fi532e5r"]
+
+[ext_resource type="Script" path="res://pipes.gd" id="1_r5pi4"]
+[ext_resource type="Texture2D" uid="uid://bv54jtohx61y3" path="res://Pillar.png" id="1_tedis"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7c08"]
+size = Vector2(128, 512)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4j3il"]
+size = Vector2(128, 192)
+
+[node name="Pipes" type="Node2D"]
+script = ExtResource("1_r5pi4")
+
+[node name="PipeTop" type="StaticBody2D" parent="."]
+position = Vector2(0, -356)
+
+[node name="Sprite2D" type="Sprite2D" parent="PipeTop"]
+scale = Vector2(8, 16)
+texture = ExtResource("1_tedis")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PipeTop"]
+shape = SubResource("RectangleShape2D_o7c08")
+
+[node name="PipeMiddle" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PipeMiddle"]
+shape = SubResource("RectangleShape2D_4j3il")
+
+[node name="PipeBottom" type="StaticBody2D" parent="."]
+position = Vector2(0, 356)
+
+[node name="Sprite2D" type="Sprite2D" parent="PipeBottom"]
+scale = Vector2(8, -16)
+texture = ExtResource("1_tedis")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PipeBottom"]
+shape = SubResource("RectangleShape2D_o7c08")
