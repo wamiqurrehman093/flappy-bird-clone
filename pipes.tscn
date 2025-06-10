@@ -16,7 +16,7 @@ script = ExtResource("1_r5pi4")
 position = Vector2(0, -356)
 
 [node name="Sprite2D" type="Sprite2D" parent="PipeTop"]
-scale = Vector2(8, 16)
+scale = Vector2(16, 16)
 texture = ExtResource("1_tedis")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PipeTop"]
@@ -31,7 +31,7 @@ shape = SubResource("RectangleShape2D_4j3il")
 position = Vector2(0, 356)
 
 [node name="Sprite2D" type="Sprite2D" parent="PipeBottom"]
-scale = Vector2(8, -16)
+scale = Vector2(16, -16)
 texture = ExtResource("1_tedis")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PipeBottom"]
